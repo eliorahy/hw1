@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, ButtonGroup, Container, Table } from 'reactstrap';
+import { Button,  ButtonGroup, Container, Table } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import 'reactjs-popup/dist/index.css';
 
@@ -48,7 +48,9 @@ class Employee extends Component {
         <td>
           <ButtonGroup>
             <Button size="sm" color="primary" tag={Link} to={"/employees/" + employee.id}>Edit</Button>
-            <Button size="sm" color="danger" onClick={() => this.remove(employee.id)}>Delete</Button>
+            <Button size="sm" color="danger" onClick={() => this.remove(employee.id)}>
+             Remove <img src="https://api.iconify.design/bi:x.svg"/>
+            </Button>
           </ButtonGroup>
         </td>
       </tr>
